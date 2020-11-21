@@ -13,7 +13,7 @@ const donate = require("./lib/donate.js");
 const info = require("./lib/info.js");
 //
 const BotName = 'Akb4r™'; // Nama Bot Whatsapp
-const instagramlu = 'https://instagram.com/Kamaadoo_tanjiro'; // Nama Instagramlu cok
+const instagramlu = 'https://instagram.com/Kamaadoo_tanjiroo'; // Nama Instagramlu cok
 const whatsapplu = '0813-6896-5962'; // Nomor whatsapplu cok
 const kapanbotaktif = '24 Jam'; // Kapan bot lu aktif
 const grupch1 = 'https://chat.whatsapp.com/K4vJLX34mvqIDS7cd05Gfi'; // OFFICIAL GRUP LU 1
@@ -121,7 +121,23 @@ if (text.includes("#say")){
   const teks = text.replace(/#say /, "")
 conn.sendMessage(id, teks, MessageType.text)
 }
+	
+if (text.includes("#sholat")){
 
+  const teks = text.replace(/#sholat /, "")
+
+  axios.get(`https://api.haipbis.xyz/jadwalsholat?daerah=${teks}`).then ((res) =>{
+
+  conn.sendMessage(id, '[ WAIT ] Sedang di proses⏳ silahkan tunggu sebentar', MessageType.text)
+
+  let hasil = `Jadwal sholat di ${teks} hari ini adalah\n\n⚡Imsyak : ${res.data.Imsyak}\n⚡Subuh : ${res.data.Subuh} WIB\n⚡Dzuhur : ${res.data.Dzuhur}WIB\n⚡Ashar : ${res.data.Ashar} WIB\n⚡Maghrib : ${res.data.Maghrib}\n⚡Isya : ${res.data.Isya} WIB\n⚡Tengah malam : ${res.data.Dhuha} WIB`;
+
+  conn.sendMessage(id, hasil, MessageType.text);
+
+})
+
+}
+	
 if (text.includes('#nulis')){
   var teks = text.replace(/#nulis /, '')
     axios.get('https://bangandre.herokuapp.com/nulis?teks='+teks)
