@@ -552,27 +552,7 @@ conn.sendMessage(id, 'kirim #ptl cewek/cowok\n\nContoh: #ptl cewek' ,MessageType
       }
    }
 	
-if (text.includes("#covid"))
 
-   {
-
-const get = require('got')
-
-    const body = await get.post('https://api.kawalcorona.com/indonesia', {
-
-    }).json();
-
-    var positif = (body[0]['positif']);
-
-    var sembuh  = (body[0]['sembuh']);
-
-    var meninggal = (body[0]['meninggal']);
-
-    var dirawat = (body[0]['dirawat']);
-
-    console.log(body[0]['name'])
-
-    conn.sendMessage(id,`📌DATA WABAH COVID-19 TERBARU DI INDONESIA\n\n📍Positif ==> ${positif} \n📍Sembuh ==> ${sembuh} \n📍Meninggal ==> ${meninggal}\n📍Dirawat ==> ${dirawat}`, MessageType.text);
 
 }
 	
