@@ -13,7 +13,7 @@ const donate = require("./lib/donate.js");
 const info = require("./lib/info.js");
 //
 const BotName = 'Akb4r™'; // Nama Bot Whatsapp
-const instagramlu = 'https://instagram.com/bintang_nur_pradana'; // Nama Instagramlu cok
+const instagramlu = 'https://instagram.com/kamaadoo_tanjiroo'; // Nama Instagramlu cok
 const whatsapplu = '0813-6896-5962'; // Nomor whatsapplu cok
 const kapanbotaktif = '24 Jam'; // Kapan bot lu aktif
 const grupch1 = 'https://chat.whatsapp.com/K4vJLX34mvqIDS7cd05Gfi'; // OFFICIAL GRUP LU 1
