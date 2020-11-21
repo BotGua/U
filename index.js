@@ -382,7 +382,7 @@ _${kata}_
   {
     const cheerio = require('cheerio');
     const request = require('request');
-    var nama = text.split("!nama ")[1];
+    var nama = text.split("#nama ")[1];
     var req = nama.replace(/ /g,"+");
     request.get({
         headers: {'content-type' : 'application/x-www-form-urlencoded'},
@@ -409,7 +409,7 @@ _${kata}_
   }
   else if (text.includes("#pasangan ")) {
     const request = require('request');
-    var gh = text.split("!pasangan ")[1];
+    var gh = text.split("#pasangan ")[1];
     var namamu = gh.split("&")[0];
     var pasangan = gh.split("&")[1];
     request.get({
