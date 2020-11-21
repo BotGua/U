@@ -1,15 +1,15 @@
 const qrcode = require("qrcode-terminal");
 const moment = require("moment");
 const cheerio = require("cheerio");
+const imageToBase64 = require('image-to-base64');
 const get = require('got')
 const fs = require("fs");
 const dl = require("./lib/downloadImage.js");
 const fetch = require('node-fetch');
 const urlencode = require("urlencode");
 const axios = require("axios");
-const imageToBase64 = require('image-to-base64');
 const menu = require("./lib/menu.js");
-const donate = require("./lib/donate.js");
+const donasi = require("./lib/donasi.js");
 const info = require("./lib/info.js");
 //
 const BotName = 'Akb4r™'; // Nama Bot Whatsapp
