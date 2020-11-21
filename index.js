@@ -34,6 +34,9 @@ const
 } = require("@adiwajshing/baileys");
 var jam = moment().format("HH:mm");
 
+// OCR Library
+const readTextInImage = require('./lib/ocr')
+
 function foreach(arr, func)
 {
    for (var i in arr)
@@ -48,7 +51,7 @@ conn.on('qr', qr =>
    {
       small: true
    });
-   console.log(`[ ${moment().format("HH:mm:ss")} ] Scan kode qr mu cok!`);
+   console.log(`[ ${moment().format("HH:mm:ss")} ] Scan kode qr dengan whatsapp!`);
 });
 
 conn.on('credentials-updated', () =>
