@@ -21,7 +21,7 @@ const BotName = 'Akb4r™';
 const instagram = 'https://instagram.com/kamaadoo_tanjiroo'; 
 const whatsapp = 'wa.me/6281368965962'; 
 const kapanbotaktif = '24 JAM'; 
-//const grupch1 = 'belum ada grup'; 
+const grupch1 = 'https://chat.whatsapp.com/K4vJLX34mvqIDS7cd05Gfi'; 
 //const grupch2 = 'belum ada grup' ; 
 const
 {
