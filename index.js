@@ -135,7 +135,15 @@ if (text.includes('#nulis')){
         })
     })
 }
+	
+if (text.includes("#say")){
 
+  const teks = text.replace(/#say /, "")
+
+conn.sendMessage(id, teks, MessageType.text)
+
+}
+	
 if (text.includes("#ytmp3")){
 const teks = text.replace(/#ytmp3 /, "")
 axios.get(`http://scrap.terhambar.com/yt?link=${teks}`).then((res) => {
