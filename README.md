@@ -1,4 +1,4 @@
-# botst4rz
+# Akb4r™
 BOT WHATSAPP HP BINTANG NUR PRADANA
 
 ### Alat dan Bahan
@@ -26,7 +26,7 @@ Sebelum lu jalanin sc nya install dulu lah.
 
 ## Features
 
-| st4rz BOT       |                Feature           |
+| Akb4r BOT       |                Feature           |
 | :-----------: | :--------------------------------: |
 |       ✅       | Sticker Creator                  |
 |       ✅       | Magernulis                       |
