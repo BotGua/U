@@ -130,14 +130,20 @@ axios.get(`https://st4rz.herokuapp.com/api/nulis?text=${teks}`).then((res) => {
 })
 }
 
-if (text.includes("#ytmp3")){
-const teks = text.replace(/#ytmp3 /, "")
-axios.get(`http://scrap.terhambar.com/yt?link=${teks}`).then((res) => {
-    let hasil = `Download sendiri melalui link dibawah ya, takut servernya down xixi..\n\nSize: ${res.data.filesize}\n\nLink: ${res.data.linkAudioOnly}`;
-    conn.sendMessage(id, hasil ,MessageType.text);
-})
+if (text.includes('!nulis')){
+  var teks = text.replace(/!nulis /, '')
+    axios.get('https://bangandre.herokuapp.com/nulis?teks='+teks)
+    .then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            conn.sendMessage(id, '[ WAIT ] Sedang di proses⏳ silahkan tunggu sebentar', MessageType.text)
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
 }
-
+	
 if (text.includes("#yt")){
 const teks = text.replace(/#yt /, "")
 axios.get(`http://scrap.terhambar.com/yt?link=${teks}`).then((res) => {
