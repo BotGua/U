@@ -175,6 +175,15 @@ axios.get(`https://mhankbarbar.herokuapp.com/api/twit?url=${teks}&apiKey=zFuV88p
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+	
+if (text.includes("#tiktok")) {
+const tictoc = text.replace(/#tiktok /, "")
+axios.get(`https://st4rz.herokuapp.com/api/tiktok?url=${tictoc}`).then((res) => {
+	 conn.sendMessage(id, '[ WAIT ] Sedang di proses⏳ silahkan tunggu sebentar', MessageType.text)
+     let titoe = `✅Berhasil!!! Silahkan klik link dibawah ini untuk mendownload hasilnya! \nKlik link dibawah🗡️\n\nJudul: ${res.data.deskripsi} \n\nDurasi: ${res.data.durasi}\n\nNama: ${res.data.nama}\n\nUrl: ${res.data.urlvideo}`;
+conn.sendMessage(id, titoe, MessageType.text);
+})
+}
 
 if (text.includes("#wiki")){
 const teks = text.replace(/#wiki /, "")
